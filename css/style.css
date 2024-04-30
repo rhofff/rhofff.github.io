@@ -1,0 +1,418 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: rgba(153, 166, 138, 0.7);
+    width: 100%;
+	height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 73px;
+    height: 73px;
+	margin-left: 0px;
+}
+
+nav ul {
+	width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#accueil {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#accueil .intro-box {
+    background-color: rgba(153, 166, 138, 0.7); /* Couleur de fond avec transparence */
+    border-radius: 19px; /* Bords arrondis pour l'esthétique */
+    padding: 20px; /* Espace intérieur pour le texte */
+    width: 80%; /* Largeur relative à la section */
+    max-width: 800px; /* Largeur maximale pour la lisibilité */
+    margin: 20px auto 0; /* Centrage et espace en haut */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre subtile pour le relief */
+    position: absolute; /* Positionnement absolu */
+    bottom: 30px; /* Positionné vers le bas dans la section */
+    left: 50%; /* Centrage horizontal */
+    transform: translateX(-50%); /* Ajustement précis du centrage */
+    text-align: center; /* Texte centré */
+}
+
+.section-header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 60px; /* Ajoutez de l'espace entre le titre et les encadrés */
+}
+
+.section-header h2 {
+    margin: 0; /* Enlève la marge par défaut */
+    padding: 0.5em 0; /* Ajoutez un peu d'espace vertical à l'intérieur du titre */
+    font-size: 1.5em; /* Taille de la police du titre */
+}
+
+
+
+/* Continuez avec les autres styles de vos sections... */
+
+
+
+#aspirations {
+    display: flex;
+    align-items: center; /* Assure un alignement vertical centré des éléments */
+    justify-content: space-evenly; /* Distribue uniformément l'espace horizontal */
+    padding: 40px 20px; /* Plus de padding autour de la section pour un look plus aéré */
+    min-height: 80vh; /* Utilise au moins 80% de la hauteur de la vue */
+}
+
+
+
+.aspirations-content {
+    flex: 2; /* Donne deux tiers de l'espace disponible aux zones de texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px; /* Espacement entre les zones de texte et l'image */
+}
+
+.text-box {
+    background-color: rgba(153, 166, 138); /* Légère transparence pour un style doux */
+    padding: 30px; /* Plus de padding pour un meilleur formatage du texte */
+    border-radius: 19px; /* Bords légèrement plus arrondis */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Ombre plus marquée pour un effet de profondeur */
+    margin-bottom: 20px; /* Espacement entre les deux boîtes de texte */
+}
+
+.aspirations-image {
+    flex: 1; /* Donne un tiers de l'espace disponible à l'image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.aspirations-image img {
+    width: auto; /* Ajuste la largeur automatiquement pour maintenir les proportions */
+    max-height: 100%; /* S'assure que l'image ne dépasse pas la hauteur de son conteneur */
+    max-width: 300px; /* Prévient que l'image soit trop large */
+}
+
+
+
+
+#parcours {
+    max-width: 100%;
+    padding: 50px 10%;
+    background-color: rgba(153, 166, 138);
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px; /* Espace entre les éléments */
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+/* Alignement alterné des encadrés */
+.grid-item.left {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.grid-item.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    #parcours {
+        padding: 50px 5%; /* Moins de padding pour les petits écrans */
+    }
+
+    .grid-item.left, .grid-item.right {
+        margin-left: auto;
+        margin-right: auto; /* Centrer les encadrés sur les petits écrans */
+    }
+}
+
+
+
+#competences {
+    background-color: white;
+    padding: 20px;
+}
+
+.section-header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: rgba(153, 166, 138, 0.7);
+    padding: 20px;
+    border-radius: 10px; /* Arrondit les coins des encadrés */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h2,
+.skill-item h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.skill-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item ul li {
+    padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Empile les compétences verticalement sur les petits écrans */
+    }
+}
+
+
+#projets {
+    background-color: rgba(153, 166, 138);
+    padding: 40px; /* Augmentation du padding pour plus d'espace autour des encadrés */
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 50px; /* Espace entre le titre et les encadrés */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois encadrés sur une ligne */
+    grid-row-gap: 40px; /* Espace entre les lignes d'encadrés */
+    grid-column-gap: 20px; /* Espace entre les encadrés de la même ligne */
+    margin-bottom: 40px; /* Espace entre les encadrés et le bas de la page */
+    padding: 0 5%; /* Ajoutez un padding sur les côtés pour contrôler la longueur des encadrés */
+}
+
+.project-item {
+    display: block; /* Les liens sont des blocs pour remplir l'espace */
+    background-color: white;
+    border: 2px solid #000000;
+    padding: 20px;
+    text-align: left;
+    color: black; /* Couleur du texte à l'intérieur de l'encadré */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin-bottom: 40px; /* Espace entre les encadrés */
+    transition: background-color 0.3s; /* Animation pour l'effet de survol */
+}
+
+.project-item:hover {
+    background-color: #eaeaea; /* Changement de couleur au survol */
+}
+
+.project-item h2,
+.project-item h3,
+.project-item p {
+    pointer-events: none; /* Évite que le texte intercepte les événements de la souris */
+}
+
+
+.project-item a {
+    color: inherit; /* Le lien utilise la couleur du texte */
+    text-decoration: none;
+    display: block; /* Le lien prend toute la largeur pour faciliter le clic */
+    margin-top: 15px; /* Espace supplémentaire avant le lien */
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-item {
+        /* Prend toute la largeur disponible, moins le padding */
+        flex: 0 0 calc(100% - 80px); /* Adjuste pour que l'encadré prenne toute la largeur, moins le padding */
+    }
+}
+
+
+
+
+#contact {
+    background-color: white;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#contact .section-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#contact .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 30%; /* Ajustez la largeur maximale de la section des infos de contact */
+}
+
+#contact .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#contact .info-item img {
+    width: 24px; /* Taille du logo */
+    height: 24px; /* Taille du logo */
+    margin-right: 10px;
+}
+
+#contact .info-item a {
+    color: black;
+    text-decoration: none;
+}
+
+#contact .contact-form {
+    flex: 2;
+    padding: 20px;
+    max-width: 700px; /* Réduire la largeur du formulaire */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 2%;
+	padding: 40px; /* Augmente le padding pour agrandir le formulaire */
+-}
+
+#contact .contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles des champs du formulaire déjà fournis... */
+
+
+#contact .contact-form .form-group input,
+#contact .contact-form .form-group textarea {
+    padding: 10px; /* Agrandissez le padding pour des champs plus grands */
+    /* Reste du style */
+}
+
+#contact .contact-form .form-group textarea {
+    height: 200px; /* Augmentez la hauteur si nécessaire */
+    /* Reste du style */
+}
+
+
+@media (max-width: 768px) {
+    #contact .contact-content {
+        flex-direction: column;
+    }
+
+    #contact .contact-info,
+    #contact .contact-form {
+        max-width: 100%;
+    }
+
+    #contact .contact-info {
+        order: 2; /* Met les infos de contact en dessous du formulaire sur mobile */
+    }
+
+    #contact .contact-form {
+        order: 1; /* Met le formulaire au-dessus des infos de contact sur mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.content h2 {
+    font-size: 1.5em;
+}
+
+/* Ajouter des styles pour les autres sections ici */
+
